@@ -17,7 +17,7 @@ HTTP는 서버와 클라이언트 사이에 요청과 응답을 주고 받는 �
 - HTTP/1.0: HTTP 헤더 개념이 도입되어, 브라우저가 요청에 대한 성공과 실패를 알 수 있게 되었다. 데이터에 대한 정보를 담고있는 메타데이터 전송도 혀용하고, Content-Type의 추가는 HTML외에 다른 문서들도 전송 가능하게 하였다.
 - HTTP/1.1: HTTP의 표준 프로토콜이며 많은 부분들이 개선되었다. 개선된 부분중에는 커넥션 제어에 관한 두가지 모델의 추가도 있다. 하나는 커넥션이 재사용될 수 있는 모델로 서버를 다루다 보면 보게되는 Keep-Alive 옵션이다. 또 다른 하나는 파이프라이닝을 추가하여 요청에 대한 응답이 완전히 전송되기 이전에 두번째 요청을 전송 가능하게 하여 네트워크 지연을 줄이는 모델이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a6edbf03-4e2b-479e-8017-78a8ea4b2667/Untitled.png)
+![Untitled](./picture/HTTP_통신.png)
 
 - HTTP/2: 구글이 만들었고, 네트워크 지연 시간을 줄이기 위한 성능에 목표를 둔 HTTP의 두번째 배전. HTTP 헤더 데이터 압축이나 서버 푸시기술 추가 등 많은 부분들이 보완되었다.
 
@@ -27,13 +27,13 @@ HTTP 메시지는 ASCII로 인코딩된 텍스트로 되어있다.
 
 기본적인 메시지 구조는 다음과 같다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/407df9eb-c152-4ceb-9ddf-b5aea67f577a/Untitled.png)
+![Untitled](./picture/HTTP_메시지_구조.png)
 
 HTTP 메시지는 기본적으로 클라이언트가 요청하고 서버가 응답하는 구조이기 때문에 메시지는 요청이냐 응답이냐 에 따라 각 메시지의 구성 내용이 달라진다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08e21ea4-e27a-4812-9262-03509022335b/Untitled.png)
+![Untitled](./picture/HTTP_메시지_상세_구조.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4b99216b-64a9-49bc-b368-9f9d0d1b002c/Untitled.png)
+![Untitled](./picture/HTTP_메시지_예시.png)
 
 ### HTTP Method
 
@@ -125,7 +125,7 @@ www.example.com/soccer/player?name=messi&position=striker
 
 - GET 요청은 캐시가 가능하다
     - GET을 통해 서버에 리소스를 요청할 때 웹 캐시가 요청을 가로채 서버로부터 리소스를 다시 다운로드하는 대신 리소스의 복사본을 반환한다.
-        
+      
         HTTP 헤더에서 cache-control 헤더를 통해 캐시 옵션을 지정할 수 있다.
         
     - GET 요청은 브라우저 히스토리에 남는다.
@@ -135,7 +135,7 @@ www.example.com/soccer/player?name=messi&position=striker
     - GET 요청은 중요한 정보를 다루면 안된다.(보안)
         - GET 요청은 파라미터에 다 노출되어 버리기 때문에 최소한의 보안 의식이라 생각하자
     - GET은 데이터를 요청할 때만 사용된다.
-        
+      
         
 
 ### POST
